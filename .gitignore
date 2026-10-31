@@ -16,3 +16,6 @@ vite.config.ts.timestamp-*.mjs
 *.db
 uploads/
 *.sqlite*
+
+# 本地产物，重新构建生成
+deploy/dist-latest.zip

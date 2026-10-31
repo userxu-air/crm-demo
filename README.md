@@ -1,4 +1,4 @@
-# YueCRM — 小团队 CRM 学习模板
+# CRM Demo — 小团队 CRM 学习模板
 
 一个面向小团队（2~12 人）的客户管理系统参考实现：销售自拓客户 → 跟进时间线 → 3 天滚动回访提醒 → 成交流水 → 老板看板 → Excel 报表一键导出。
 
@@ -31,8 +31,8 @@
 ### 方式一：Docker Compose（推荐）
 
 ```bash
-git clone https://github.com/<you>/yuecrm.git
-cd yuecrm/deploy
+git clone https://github.com/userxu-air/crm-demo.git
+cd crm-demo/deploy
 cp .env.example .env        # 修改其中的密码与密钥
 docker compose up -d --build
 # 访问 http://localhost:8000 （前端见方式二，或自行反代）

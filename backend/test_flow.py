@@ -1,4 +1,4 @@
-"""YueCRM P0-W1 全链路验证脚本（标准库实现，无第三方依赖）。"""
+"""CRM Demo P0-W1 全链路验证脚本（标准库实现，无第三方依赖）。"""
 import json
 import urllib.request
 

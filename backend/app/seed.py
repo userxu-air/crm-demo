@@ -7,7 +7,7 @@ from app.database import Base, SessionLocal, engine
 from app.models import Role, User
 from app.security import hash_password
 
-logger = logging.getLogger("yuecrm.seed")
+logger = logging.getLogger("crm-demo.seed")
 
 
 def _ensure_column(engine, table: str, column: str, ddl: str):

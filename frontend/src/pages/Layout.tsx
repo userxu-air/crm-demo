@@ -47,7 +47,7 @@ export default function Layout() {
 
   return (
     <ProLayout
-      title={`跃舟 CRM · ${me?.name || ""}`}
+      title={`示例 CRM · ${me?.name || ""}`}
       layout="mix"
       location={{ pathname: loc.pathname }}
       route={{ path: "/", routes: menu }}

@@ -1,8 +1,9 @@
 """把样板文件清成模板：保留全部结构/表头/公式/合并格/样式，仅清数据。"""
 import os
+from pathlib import Path
 from openpyxl import load_workbook
 
-T = r"C:\Users\admin\WorkBuddy\2026-09-21-09-35-44\yuecrm\backend\templates"
+T = str(Path(__file__).resolve().parent / "templates")
 
 
 def clear_range(ws, min_row, min_col=2):

@@ -55,7 +55,7 @@ CID = c["id"]
 _, d1 = req("POST", f"/api/customers/{CID}/deals", {
     "product": "直角封口贴标机", "product_line": "right_angle",
     "quantity": 3, "unit": "台", "unit_price": 7500,
-    "invoice_type": "13%专票", "account": "公账（）", "sales_no": "跃舟号",
+    "invoice_type": "13%专票", "account": "公账（）", "sales_no": "示例号",
 }, AT)
 check("成交创建 201", d1.get("id") is not None)
 check("金额自动计算 3×7500=22500", d1.get("amount") == 22500)

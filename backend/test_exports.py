@@ -56,7 +56,7 @@ _, c1 = req("POST", "/api/customers", {"company_name": "导出测试A", "contact
 made.append(c1["id"])
 _, d1 = req("POST", f"/api/customers/{c1['id']}/deals", {
     "product": "直角封口贴标机", "product_line": "right_angle", "quantity": 2, "unit": "台",
-    "unit_price": 4500, "deal_date": f"{YEAR}-{MONTH:02d}-01", "sales_no": "跃舟号",
+    "unit_price": 4500, "deal_date": f"{YEAR}-{MONTH:02d}-01", "sales_no": "示例号",
 }, AT)
 ck("① 造演示成交", d1.get("id") is not None)
 

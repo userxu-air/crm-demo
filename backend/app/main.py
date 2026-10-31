@@ -11,7 +11,7 @@ from app.seed import init_db_and_seed
 docs_url = "/api/docs" if settings.ENABLE_DOCS else None
 openapi_url = "/openapi.json" if settings.ENABLE_DOCS else None
 
-app = FastAPI(title="YueCRM", version="0.1.0", docs_url=docs_url, redoc_url=None, openapi_url=openapi_url)
+app = FastAPI(title="CRM Demo", version="0.1.0", docs_url=docs_url, redoc_url=None, openapi_url=openapi_url)
 
 app.add_middleware(
     CORSMiddleware,
@@ -39,4 +39,4 @@ def on_startup():
 
 @app.get("/api/health")
 def health():
-    return {"ok": True, "app": "YueCRM"}
+    return {"ok": True, "app": "CRM Demo"}

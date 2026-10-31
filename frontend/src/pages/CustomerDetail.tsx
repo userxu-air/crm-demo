@@ -342,7 +342,7 @@ export default function CustomerDetail() {
         </Col>
         <Col span={12}>
           <Form.Item name="sales_no" label="来源号">
-            <Input placeholder="如：跃舟号（可选）" />
+            <Input placeholder="如：示例号（可选）" />
           </Form.Item>
         </Col>
       </Row>

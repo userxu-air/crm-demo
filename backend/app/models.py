@@ -132,7 +132,7 @@ class Deal(Base):
     amount: Mapped[float] = mapped_column(default=0)  # 成交金额
     invoice_type: Mapped[str] = mapped_column(String(20), default="")  # 开票类型
     account: Mapped[str] = mapped_column(String(50), default="")  # 收款账户
-    sales_no: Mapped[str] = mapped_column(String(50), default="")  # 来源号（跃舟号/AI号等）
+    sales_no: Mapped[str] = mapped_column(String(50), default="")  # 来源号（示例号/AI号等）
     repurchase: Mapped[bool] = mapped_column(default=False)
     remark: Mapped[str] = mapped_column(Text, default="")
     import_batch: Mapped[Optional[str]] = mapped_column(String(36), nullable=True)  # 导入批次（溯源）

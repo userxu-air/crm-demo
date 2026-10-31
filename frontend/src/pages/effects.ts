@@ -403,7 +403,7 @@ export function initParticleText(
 ): () => void {
   const ctx = canvas.getContext("2d")!;
 
-  const text = opts?.text ?? "YUE ZHOU";
+  const text = opts?.text ?? "CRM DEMO";
   const particleSize = 2.3,
     density = 4;
   const color = opts?.color ?? "#22d3ee",

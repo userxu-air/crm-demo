@@ -75,7 +75,7 @@ export const INVOICE_MAP: Record<string, string> = {
 };
 
 export const ACCOUNT_MAP: Record<string, string> = {
-  "公账（跃舟）": "公账（跃舟）",
+  "公账（示例）": "公账（示例）",
   "公账（）": "公账（）",
   "广东钰锋账户转账": "广东钰锋账户转账",
   聚合码: "聚合码",
