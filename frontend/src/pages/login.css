@@ -1,0 +1,141 @@
+/* ===== 登录页：浅色科技风 · 无卡片（粒子文字标题 + 浮层表单）===== */
+
+.login-screen {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(180deg, #f4fafd 0%, #e8f3fa 100%);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fx-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.fx-swarm {
+  z-index: 1;
+  pointer-events: none;
+}
+
+.login-center {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 0 24px;
+  transform: translateY(-5%);
+}
+
+/* —— 粒子文字标题（YZ CRM，鼠标可推开聚散）—— */
+.particle-text {
+  display: block;
+  width: min(720px, 92vw);
+  height: 180px;
+  cursor: default;
+  margin-bottom: 14px;
+}
+
+/* —— 表单浮层（无卡片，输入框自带白底可辨识）—— */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: min(330px, 86vw);
+}
+.login-form .ant-form-item {
+  margin-bottom: 18px;
+}
+
+/* 手机号框（裸 input）与密码框（affix-wrapper）统一方框圆角格式 */
+.login-form .ant-input-affix-wrapper,
+.login-form .ant-input:not(.ant-input-affix-wrapper > .ant-input) {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(14, 165, 233, 0.3);
+  border-radius: 12px;
+  height: 44px;
+  box-shadow: 0 4px 18px rgba(2, 62, 102, 0.06);
+  transition: all 0.2s;
+}
+.login-form .ant-input:not(.ant-input-affix-wrapper > .ant-input) {
+  padding: 0 18px;
+}
+.login-form .ant-input-affix-wrapper,
+.login-form .ant-input-affix-wrapper:hover,
+.login-form .ant-input:not(.ant-input-affix-wrapper > .ant-input):hover {
+  border-color: rgba(8, 145, 178, 0.55);
+}
+.login-form .ant-input-affix-wrapper:focus,
+.login-form .ant-input-affix-wrapper-focused,
+.login-form .ant-input:not(.ant-input-affix-wrapper > .ant-input):focus {
+  border-color: #0891b2;
+  background: #ffffff;
+  box-shadow:
+    0 0 0 3px rgba(14, 165, 233, 0.14),
+    0 6px 24px rgba(14, 165, 233, 0.18);
+}
+/* 密码框内部裸 input 重置，避免双圆角 */
+.login-form .ant-input-affix-wrapper > .ant-input {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  height: auto;
+  padding: 0 4px;
+}
+.login-form .ant-input {
+  background: transparent;
+  color: #12384e;
+  letter-spacing: 1px;
+}
+.login-form .ant-input::placeholder {
+  color: rgba(114, 144, 163, 0.75);
+}
+.login-form .ant-input-password-icon {
+  color: rgba(114, 144, 163, 0.8);
+}
+.login-form .ant-input-password-icon:hover {
+  color: #0891b2;
+}
+.login-form input:-webkit-autofill,
+.login-form input:-webkit-autofill:hover,
+.login-form input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #12384e;
+  -webkit-box-shadow: 0 0 0 1000px rgba(255, 255, 255, 0.98) inset;
+  caret-color: #12384e;
+  transition: background-color 9999s ease-out 0s;
+}
+
+/* —— 登录按钮：青蓝渐变胶囊 —— */
+.login-form .ant-btn-primary {
+  width: 100%;
+  height: 46px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #0ea5e9, #22d3ee);
+  color: #062a3d;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 6px;
+  box-shadow: 0 6px 22px rgba(14, 165, 233, 0.35);
+  transition: all 0.2s;
+}
+.login-form .ant-btn-primary:hover {
+  background: linear-gradient(135deg, #38bdf8, #67e8f9) !important;
+  box-shadow: 0 8px 30px rgba(14, 165, 233, 0.45);
+  transform: translateY(-1px);
+}
+
+/* —— 登录按钮底部小字 —— */
+.login-hint {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 12px;
+  color: rgba(114, 144, 163, 0.75);
+  letter-spacing: 1px;
+  user-select: none;
+}

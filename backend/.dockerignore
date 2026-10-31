@@ -1,0 +1,5 @@
+__pycache__
+*.pyc
+dev.db
+.env
+test_flow.py
